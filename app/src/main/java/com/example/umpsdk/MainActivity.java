@@ -30,11 +30,12 @@ public class MainActivity extends AppCompatActivity {
     public void getConsentStaus(){
         consentInformation = UserMessagingPlatform.getConsentInformation(this);
 
-     /*   ConsentDebugSettings debugSettings= new ConsentDebugSettings.Builder(this)
+        ConsentDebugSettings debugSettings= new ConsentDebugSettings.Builder(this)
                 .setDebugGeography(ConsentDebugSettings.DebugGeography.DEBUG_GEOGRAPHY_EEA)
-                .build();*/
+                .build();
 
         ConsentRequestParameters parameters= new ConsentRequestParameters.Builder()
+                .setConsentDebugSettings(debugSettings)
                 .setTagForUnderAgeOfConsent(false)
                 .build();
 
